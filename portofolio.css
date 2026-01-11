@@ -1,0 +1,97 @@
+body {
+  /* memberikan jarak antar baris pada font */
+  /* seharusnya 1,5 */
+  line-height: 1.5;
+  /* menghilangkan margin padda elemn body */
+  margin: 0;
+}
+h1 {
+  /* mengilangkan margin pda h1   */
+  margin: 0;
+}
+h2 {
+  /* membuat warna pada yx designer */
+  background-color: #212530;
+  display: inline-block;
+}
+header {
+  background-color: #171b26;
+  /* mengubah warna font */
+  color: white;
+}
+
+main {
+  background-color: white;
+}
+.container {
+  width: 800px;
+  /* memindahkan elemen container */
+  margin: 0 auto;
+}
+.sidebar {
+  width: 300px;
+  background-color: #212530;
+  padding: 50px 0;
+  float: left;
+}
+.content {
+  float: left;
+  /* agar font berada di kanan img bisa menggunakan padding -width */
+  width: 500px;
+  padding: 50px 50px;
+  /* cara lainnya */
+  box-sizing: border-box;
+}
+.sidebar img {
+  width: 100%;
+}
+
+/* mengubah tempat elemnt contetn */
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+.float-50 {
+  /* memindahkan elemnt float */
+  float: left;
+  width: 50%;
+}
+.float-40 {
+  /* memindahkan elemnt float */
+  float: left;
+  width: 40%;
+}
+.float-60 {
+  /* memindahkan elemnt float */
+  float: left;
+  width: 60%;
+}
+.mb-1 {
+  /* harusnya menggunakan 1,5 rem */
+  margin-bottom: 1.5rem;
+}
+.mt-2 {
+  /* memberikan margin top kepada addres */
+  margin-top: 3rem;
+}
+
+/* mengganti background  */
+main .sidebar {
+  background-color: lightgray;
+  /* memberikan jarak kepada teoi huruf */
+  padding: 50px 50px;
+  box-sizing: border-box;
+}
+ul {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-left: 20px;
+}
+.clear {
+  clear: both;
+}
+.skills {
+  font-size: 1.2rem;
+}
