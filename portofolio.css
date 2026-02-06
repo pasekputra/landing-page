@@ -1,97 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  /* memberikan jarak antar baris pada font */
-  /* seharusnya 1,5 */
+  margin: 0;
   line-height: 1.5;
-  /* menghilangkan margin padda elemn body */
-  margin: 0;
+  font-family: Arial, sans-serif;
 }
-h1 {
-  /* mengilangkan margin pda h1   */
-  margin: 0;
-}
+
+h1,
 h2 {
-  /* membuat warna pada yx designer */
-  background-color: #212530;
-  display: inline-block;
+  margin: 0;
 }
+
 header {
   background-color: #171b26;
-  /* mengubah warna font */
   color: white;
 }
 
 main {
   background-color: white;
 }
+
 .container {
-  width: 800px;
-  /* memindahkan elemen container */
+  max-width: 900px;
   margin: 0 auto;
+  padding: 20px;
 }
-.sidebar {
-  width: 300px;
-  background-color: #212530;
-  padding: 50px 0;
-  float: left;
+/* layout header */
+
+.profile-layout {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
-.content {
-  float: left;
-  /* agar font berada di kanan img bisa menggunakan padding -width */
-  width: 500px;
-  padding: 50px 50px;
-  /* cara lainnya */
-  box-sizing: border-box;
-}
+
 .sidebar img {
-  width: 100%;
+  width: 200px;
+  border-radius: 10px;
 }
 
-/* mengubah tempat elemnt contetn */
-.clearfix {
-  content: "";
-  clear: both;
-  display: table;
-}
-.float-50 {
-  /* memindahkan elemnt float */
-  float: left;
-  width: 50%;
-}
-.float-40 {
-  /* memindahkan elemnt float */
-  float: left;
-  width: 40%;
-}
-.float-60 {
-  /* memindahkan elemnt float */
-  float: left;
-  width: 60%;
-}
-.mb-1 {
-  /* harusnya menggunakan 1,5 rem */
-  margin-bottom: 1.5rem;
-}
-.mt-2 {
-  /* memberikan margin top kepada addres */
-  margin-top: 3rem;
+.content h2 {
+  background-color: #212530;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 5px;
 }
 
-/* mengganti background  */
-main .sidebar {
-  background-color: lightgray;
-  /* memberikan jarak kepada teoi huruf */
-  padding: 50px 50px;
-  box-sizing: border-box;
+.info {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
 }
-ul {
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding-left: 20px;
+
+.info p {
+  margin: 5px 0 10px;
 }
-.clear {
-  clear: both;
+
+/* main layout */
+
+.main-layout {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
 }
+
+.secondary {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .skills {
-  font-size: 1.2rem;
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+ul {
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+//responsive design
+
+/* Tablet */
+@media (max-width: 900px) {
+  .profile-layout,
+  .main-layout,
+  .info,
+  .skills {
+    flex-direction: column;
+  }
+
+  .sidebar img {
+    width: 150px;
+  }
+}
+
+/* Handphone */
+@media (max-width: 576px) {
+  .sidebar img {
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .info,
+  .skills {
+    text-align: center;
+  }
+
+  ul {
+    font-size: 1rem;
+  }
 }
